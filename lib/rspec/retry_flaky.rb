@@ -6,7 +6,7 @@ module RSpec
   class Flaky
     def self.apply
       RSpec.configure do |conf|
-        conf.add_setting :verbose_retry_flack_example, :default => false
+        conf.add_setting :verbose_retry_flaky_example, :default => false
         conf.add_setting :flaky_retry_count, :default => 1
         conf.add_setting :flaky_sleep_interval, :default => 0
 
