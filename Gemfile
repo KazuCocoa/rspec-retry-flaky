@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in retry_flaky_example.gemspec
+# Specify your gem's dependencies in rspec-retry-flaky.gemspec
 gemspec
