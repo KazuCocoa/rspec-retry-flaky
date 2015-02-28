@@ -28,6 +28,8 @@ RSpec.configure do |c|
 end
 ```
 
+This feature use ```RSpec.configure.around(:example) { |example| something }``` hook.
+
 ## Usage
 
 ### progress message when the example retry
