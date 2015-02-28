@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['fly.49.89.over@gmail.com']
   spec.summary       = %q{retry failed flaky example}
   spec.description   = %q{retry failed flaky example}
-  spec.homepage      = 'https://github.com/KazuCocoa/retry_flaky_example'
+  spec.homepage      = 'https://github.com/KazuCocoa/rspec-retry-flaky'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,5 +18,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency %q{rspec}
+  spec.add_dependency %q{'rspec', '~>3.0.0'}
   spec.add_development_dependency %q{guard-rspec}
 end
