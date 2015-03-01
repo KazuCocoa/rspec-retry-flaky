@@ -1,7 +1,8 @@
 # RspecRetryFlaky
 
 Retry rspec if failed some tests.
-Similar to https://github.com/y310/rspec-retry .
+
+You can set how many retry test and how long wait retrying test within RSpec.configure.
 
 ## Build Status
 
