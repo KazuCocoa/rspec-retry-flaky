@@ -1,13 +1,18 @@
-# RetryFlakyExample
+# RspecRetryFlaky
 
-TODO: Write a gem description
+Retry rspec if failed some tests.
+Similar to https://github.com/y310/rspec-retry .
+
+## Build Status
+
+[![Build Status](https://travis-ci.org/KazuCocoa/rspec-retry-flaky.svg?branch=master)](https://travis-ci.org/KazuCocoa/rspec-retry-flaky)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'retry_flaky_example'
+gem 'rspec-retry-flaky'
 ```
 
 And then execute:
@@ -16,7 +21,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install retry_flaky_example
+    $ gem install rspec-retry-flaky
 
 require in ```rspec_helper.rb```
 
