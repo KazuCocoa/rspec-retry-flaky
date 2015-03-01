@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+- 2.0.0
+- 2.1.0
+- 2.1.4
+
+script: bundle exec rspec
+
+branches:
+  only:
+  - master
+
+notifications:
+  slack:
+    secure: dREoGm6W0qj17FsaUOGk05/+hdzfIti5UNDVGqD+CoUUigElOJuY9TG9udH+aKp75ILtZ4gsnxFac9KxvTrMfMU+tYeuwfE7dZiApNz0e3G1gRYcbNym6z/z4GLR1F8or6XcHPmKwor5qJ/3e+u9ZbiqT3s4cgU4dFJN8xXxpms=
