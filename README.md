@@ -51,9 +51,9 @@ It can use in Turnip.
 ```
 @off_flaky_test
 Feature: example
-  Scenario: attack the monster
-    When I attack it
-    Then it should die
+  Scenario: sample scenario
+    When example step
+    Then example expected
 ```
 
 ### progress message when the example retry
