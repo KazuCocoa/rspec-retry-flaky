@@ -15,8 +15,8 @@ module RSpec
           sleep_interval = RSpec.configuration.flaky_sleep_interval
 
           retry_count.times do |r_count|
-            if RSpec.configuration.verbose_retry_flack_example && r_count > 0
-              msg = "Retry flaky #{r_count} times: #{example.location}"
+            if RSpec.configuration.verbose_retry_flaky_example && r_count > 0
+              msg = "\nRetry flaky #{r_count} times: #{example.location}"
               RSpec.configuration.reporter.message msg
             end
 
