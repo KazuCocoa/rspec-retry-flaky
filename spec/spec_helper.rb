@@ -1,6 +1,6 @@
 require 'rspec'
-require 'rspec/retry_flaky'
+require_relative '../lib/rspec/retry_flaky'
 
 RSpec.configure do |c|
-  c.verbose_retry_flack_example = true
+  c.verbose_retry_flaky_example = true
 end

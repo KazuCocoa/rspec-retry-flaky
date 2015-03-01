@@ -16,10 +16,6 @@ describe RSpec::Flaky do
     @expectations = expectations
   end
 
-  def shift_expectation
-    @expectations.shift
-  end
-
   context 'no retry option' do
     it 'should work' do
       expect(true).to be true
@@ -46,4 +42,37 @@ describe RSpec::Flaky do
       expect(RSpec.configuration.flaky_sleep_interval).to eq sleep_interval
     end
   end
+
+  # raise error at rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb:30:in `fail_with'
+  # But count and expectations are expected.
+  # TODO Should make stable.
+=begin
+  context 'with retry count' do
+    let!(:retry_count) { 3 }
+    before(:all) { RSpec.configure { |c| c.flaky_retry_count = 3 } }
+    before(:each) { count_up }
+
+    context do
+      before(:all) { set_expectations([false, false, true]) }
+
+      it "should run example until #{:retry_count} times" do
+        expect(true).to be @expectations[count - 1]
+        puts "======#{count}======="
+        expect(count).to eq 3
+      end
+
+    end
+
+    context do
+      before(:all) { set_expectations([false, true, false]) }
+
+      it "should stop example if example succeed" do
+        expect(true).to be @expectations[count - 1]
+        puts "======#{count}======="
+        expect(count).to eq 2
+      end
+    end
+  end
+=end
+
 end
