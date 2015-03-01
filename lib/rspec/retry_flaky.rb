@@ -14,6 +14,11 @@ module RSpec
           retry_count = RSpec.configuration.flaky_retry_count
           sleep_interval = RSpec.configuration.flaky_sleep_interval
 
+          if example.metadata[:off_flaky_test]
+            RSpec.configuration.reporter.message "\nTurn retry flaky off: #{example.location}"
+            retry_count = 1 # make retry_count default
+          end
+
           retry_count.times do |r_count|
             if RSpec.configuration.verbose_retry_flaky_example && r_count > 0
               msg = "\nRetry flaky #{r_count} times: #{example.location}"

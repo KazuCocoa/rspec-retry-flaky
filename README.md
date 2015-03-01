@@ -38,6 +38,24 @@ This feature use ```RSpec.configure.around(:example) { |example| something }``` 
 
 ## Usage
 
+### Turn off flaky retry
+
+```
+it "example scenario", :off_flaky_test do
+  # test case
+end
+```
+
+It can use in Turnip.
+
+```
+@off_flaky_test
+Feature: example
+  Scenario: attack the monster
+    When I attack it
+    Then it should die
+```
+
 ### progress message when the example retry
 
 ```

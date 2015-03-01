@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'stringio'
 
 describe RSpec::Flaky do
 
@@ -46,18 +47,24 @@ describe RSpec::Flaky do
   # raise error at rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb:30:in `fail_with'
   # But count and expectations are expected.
   # TODO Should make stable.
-=begin
   context 'with retry count' do
-    let!(:retry_count) { 3 }
+    let(:retry_count) { 3 }
     before(:all) { RSpec.configure { |c| c.flaky_retry_count = 3 } }
     before(:each) { count_up }
 
+    # TODO Should fail at first time.
+    context do
+      it "set flaky_retry_count is #{:retry_count}, but set no_flaky_test tag", :off_flaky_test do
+        expect(count).to eq 1
+      end
+    end
+
+=begin
     context do
       before(:all) { set_expectations([false, false, true]) }
 
       it "should run example until #{:retry_count} times" do
         expect(true).to be @expectations[count - 1]
-        puts "======#{count}======="
         expect(count).to eq 3
       end
 
@@ -68,11 +75,10 @@ describe RSpec::Flaky do
 
       it "should stop example if example succeed" do
         expect(true).to be @expectations[count - 1]
-        puts "======#{count}======="
         expect(count).to eq 2
       end
     end
-  end
 =end
 
+  end
 end
