@@ -44,9 +44,6 @@ describe RSpec::Flaky do
     end
   end
 
-  # raise error at rspec-expectations-3.1.2/lib/rspec/expectations/fail_with.rb:30:in `fail_with'
-  # But count and expectations are expected.
-  # TODO Should make stable.
   context 'with retry count' do
     let(:retry_count) { 3 }
     before(:all) { RSpec.configure { |c| c.flaky_retry_count = 3 } }
@@ -59,7 +56,6 @@ describe RSpec::Flaky do
       end
     end
 
-=begin
     context do
       before(:all) { set_expectations([false, false, true]) }
 
@@ -78,7 +74,6 @@ describe RSpec::Flaky do
         expect(count).to eq 2
       end
     end
-=end
 
   end
 end
