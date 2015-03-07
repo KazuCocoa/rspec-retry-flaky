@@ -1,5 +1,7 @@
 # RspecRetryFlaky
 
+[![Gem Version](https://badge.fury.io/rb/rspec-retry-flaky.svg)](http://badge.fury.io/rb/rspec-retry-flaky)
+
 Retry rspec if failed some tests.
 
 You can set how many retry test and how long wait retrying test within RSpec.configure.

@@ -6,9 +6,9 @@ module RSpec
   class Flaky
     def self.apply
       RSpec.configure do |conf|
-        conf.add_setting :verbose_retry_flaky_example, :default => false
-        conf.add_setting :flaky_retry_count, :default => 1
-        conf.add_setting :flaky_sleep_interval, :default => 0
+        conf.add_setting :verbose_retry_flaky_example, default: false
+        conf.add_setting :flaky_retry_count, default: 1
+        conf.add_setting :flaky_sleep_interval, default: 0
 
         # from rspec/rspec-core
         # context.example is deprecated, but RSpec.current_example is not
