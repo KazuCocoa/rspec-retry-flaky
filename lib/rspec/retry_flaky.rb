@@ -39,8 +39,7 @@ module RSpec
 
             break if current_example.exception.nil?
 
-            sleep sleep_interval if sleep_interval.to_i > 0
-
+            sleep sleep_interval if sleep_interval > 0
           end
 
         end # conf.around
