@@ -10,8 +10,6 @@ You can set how many retry test and how long wait retrying test within RSpec.con
 
 [![Build Status](https://travis-ci.org/KazuCocoa/rspec-retry-flaky.svg?branch=master)](https://travis-ci.org/KazuCocoa/rspec-retry-flaky)
 
-[![Code Climate](https://codeclimate.com/github/KazuCocoa/rspec-retry-flaky/badges/gpa.svg)](https://codeclimate.com/github/KazuCocoa/rspec-retry-flaky)
-
 ## Installation
 
 Add this line to your application's Gemfile:
