@@ -32,7 +32,7 @@ require in ```rspec_helper.rb```
 
 ```ruby
 RSpec.configure do |c|
-  c.verbose_retry_flack_example = true # turn on retry flack example verbose
+  c.verbose_retry_flaky_example = true # turn on retry flaky example verbose
   c.flaky_retry_count = 3 # retry count when failed the example
   c.flaky_sleep_interval = 10 # sleep interval between retry the example
 end
@@ -70,7 +70,7 @@ Retry flaky 3 times: ./spec/example.rb:10
 
 ### Configurations
 
-- verbose_retry_flack_example(default: false)
+- verbose_retry_flaky_example(default: false)
 - flaky_retry_count(default: 1)
 - flaky_sleep_interval(default: 0)
 
